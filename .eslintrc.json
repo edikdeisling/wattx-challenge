@@ -1,0 +1,86 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json",
+          "e2e/tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "plugins": ["unused-imports"],
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:import/typescript",
+        "airbnb-typescript/base",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }], // warn abount missing deps
+        "unused-imports/no-unused-imports-ts": "error", // remove unused imports
+        "import/prefer-default-export": "off", // allow named exports
+        "no-multiple-empty-lines": ["error"], // max 2 empty lines
+        "no-multi-spaces": ["error"], // no unneccessary spaces
+        "@typescript-eslint/lines-between-class-members": "off", // enable to write class variables together
+        "no-console": "off", // allow console.log in code
+        "class-methods-use-this": "off", // allow functions in class without "this"
+        "@typescript-eslint/no-explicit-any": ["error"], // must use unknown but not any
+        "@typescript-eslint/array-type": ["error", { "default": "array" }], // allow: T[]. disallow: Array<T>
+        "complexity": ["error", 16], // max complexity 16
+        "import/order": [ // order imports
+          "error",
+          {
+            "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "unknown"],
+            "newlines-between": "never", // no gaps between imports
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            }
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      },
+      "env": {
+        "browser": true
+      }
+    },
+    {
+      "env": {
+        "jasmine": true
+      },
+      "files": ["**/*.spec.ts"]
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
