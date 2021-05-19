@@ -3,7 +3,7 @@
   "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
-      "files": ["*.ts"],
+      "files": ["*.ts", "*.js"],
       "parserOptions": {
         "project": ["tsconfig.json"],
         "createDefaultProgram": true
@@ -17,7 +17,8 @@
         "plugin:prettier/recommended"
       ],
       "rules": {
-        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }], // warn abount missing deps
+        "no-return-assign": "off", // allow (a) => (this.bar = a)
+        "import/no-extraneous-dependencies": "off", // allow rxjs/operators
         "unused-imports/no-unused-imports-ts": "error", // remove unused imports
         "import/prefer-default-export": "off", // allow named exports
         "no-multiple-empty-lines": ["error"], // max 2 empty lines

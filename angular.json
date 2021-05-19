@@ -70,7 +70,8 @@
               "browserTarget": "wattx-challenge:build:production"
             },
             "development": {
-              "browserTarget": "wattx-challenge:build:development"
+              "browserTarget": "wattx-challenge:build:development",
+              "proxyConfig": "src/proxy.conf.js"
             }
           },
           "defaultConfiguration": "development"
