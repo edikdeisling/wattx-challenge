@@ -1,6 +1,47 @@
+:host {
+  padding: 0 24px;
+}
+
 th,
 td {
   padding: 4px 16px;
   text-align: left;
   border: solid 1px var(--blue-500);
+}
+
+.cell-label {
+  display: none;
+}
+
+@media (max-width: 719px) {
+
+  :host {
+    padding: 0 12px;
+  }
+
+  .cell-label {
+    display: block;
+    margin-right: 4px;
+  }
+
+  .header-row {
+    display: none;
+  }
+
+  table {
+    display: block;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row + .row {
+    margin-top: 24px;
+  }
+
+  td {
+    display: flex;
+  }
 }

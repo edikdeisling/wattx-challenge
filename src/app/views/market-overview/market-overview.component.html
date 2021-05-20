@@ -1,5 +1,5 @@
 <table>
-  <tr>
+  <tr class="header-row">
     <th>Rank</th>
     <th>Name</th>
     <th>Price</th>
@@ -7,12 +7,30 @@
     <th>Market Cap</th>
     <th>Volume (24h)</th>
   </tr>
-  <tr *ngFor="let currency of coinMarketCapService.currencies.value">
-    <td>{{ currency.cmc_rank }}</td>
-    <td>{{ currency.name }}</td>
-    <td>{{ currency.quote.USD.price | currency:'USD':'symbol':'1.2-2' }}</td>
-    <td>{{ currency.quote.USD.percent_change_24h | percentChange }}</td>
-    <td>{{ currency.quote.USD.market_cap | currency:'USD':'symbol':'1.0-0' }}</td>
-    <td>{{ currency.quote.USD.volume_24h | currency:'USD':'symbol':'1.0-0' }}</td>
+  <tr class="row" *ngFor="let currency of coinMarketCapService.currencies.value">
+    <td>
+      <span class="cell-label">Rank:</span>
+      {{ currency.cmc_rank }}
+    </td>
+    <td>
+      <span class="cell-label">Name:</span>
+      {{ currency.name }}
+    </td>
+    <td>
+      <span class="cell-label">Price:</span>
+      {{ currency.quote.USD.price | currency:'USD':'symbol':'1.2-2' }}
+    </td>
+    <td>
+      <span class="cell-label">Price Change (24h):</span>
+      {{ currency.quote.USD.percent_change_24h | percentChange }}
+    </td>
+    <td>
+      <span class="cell-label">Market Cap:</span>
+      {{ currency.quote.USD.market_cap | currency:'USD':'symbol':'1.0-0' }}
+    </td>
+    <td>
+      <span class="cell-label">Volume (24h):</span>
+      {{ currency.quote.USD.volume_24h | currency:'USD':'symbol':'1.0-0' }}
+    </td>
   </tr>
 </table>

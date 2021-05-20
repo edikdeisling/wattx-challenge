@@ -5,6 +5,18 @@
   --text-color: #030303;
   --blue-100: #f0f8ff;
   --blue-500: #c4e7ff;
+  --size-min-width: 325px;
+
+  /* 0 ... 375, 480, up tp big phones */
+  --size-tablet-s: 720px;
+  /* 0 ... 720, 768, up to tablet in landscape */
+  --size-tablet-l: 1024px;
+  /* 0 ... 768, 1024 up to small desktops */
+  --size-desktop-s: 1280px;
+  /* 0 ... 1366, 1440 up to average desktops */
+  --size-desktop-l: 1440px;
+  /* large screens */
+  --size-desktop-xl: 1840px;
 }
 
 html,
