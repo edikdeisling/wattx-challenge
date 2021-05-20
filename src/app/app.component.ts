@@ -10,11 +10,11 @@ import { CoinMarketCapService } from 'src/app/services/coin-market-cap.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  currenciesSubscription: Subscription;
+  private currenciesSubscription: Subscription;
   limit?: number;
 
   constructor(
-    private coinMarketCapService: CoinMarketCapService,
+    public coinMarketCapService: CoinMarketCapService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
   ) {}

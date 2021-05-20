@@ -1,6 +1,6 @@
 <div>
-  <a routerLink="/liquidity">liquidity</a>
-  <a routerLink="/">market-overview</a>
+  <a routerLink="/liquidity" queryParamsHandling="preserve">liquidity</a>
+  <a routerLink="/" queryParamsHandling="preserve">market-overview</a>
 </div>
 <div>
   <label *ngFor="let value of limits">

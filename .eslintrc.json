@@ -17,6 +17,8 @@
         "plugin:prettier/recommended"
       ],
       "rules": {
+        "no-new": "off", // allow new Chart(...)
+        "no-restricted-syntax": "off", // allow for-of
         "no-nested-ternary": "off", // allow nested ternary
         "no-return-assign": "off", // allow (a) => (this.bar = a)
         "import/no-extraneous-dependencies": "off", // allow rxjs/operators

@@ -7,7 +7,7 @@
     <th>Market Cap</th>
     <th>Volume (24h)</th>
   </tr>
-  <tr *ngFor="let currency of coinMarketCapService.currencies">
+  <tr *ngFor="let currency of coinMarketCapService.currencies.value">
     <td>{{ currency.cmc_rank }}</td>
     <td>{{ currency.name }}</td>
     <td>{{ currency.quote.USD.price | currency:'USD':'symbol':'1.2-2' }}</td>

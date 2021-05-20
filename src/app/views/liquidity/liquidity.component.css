@@ -1,0 +1,9 @@
+:host {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  width: 65%;
+  min-width: 1000px;
+  padding: 24px;
+}

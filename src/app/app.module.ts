@@ -1,4 +1,4 @@
-import { DecimalPipe } from '@angular/common';
+import { CurrencyPipe, DecimalPipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +18,7 @@ import { MarketOverviewComponent } from './views/market-overview/market-overview
     PercentChangePipe,
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
-  providers: [DecimalPipe],
+  providers: [DecimalPipe, PercentChangePipe, CurrencyPipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
