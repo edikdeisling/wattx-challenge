@@ -17,6 +17,7 @@
         "plugin:prettier/recommended"
       ],
       "rules": {
+        "no-nested-ternary": "off", // allow nested ternary
         "no-return-assign": "off", // allow (a) => (this.bar = a)
         "import/no-extraneous-dependencies": "off", // allow rxjs/operators
         "unused-imports/no-unused-imports-ts": "error", // remove unused imports
