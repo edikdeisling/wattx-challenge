@@ -1,10 +1,23 @@
-<div>
-  <a routerLink="/liquidity" queryParamsHandling="preserve">liquidity</a>
-  <a routerLink="/" queryParamsHandling="preserve">market-overview</a>
+<div class="links">
+  <a
+    class="link"
+    routerLink="/"
+    queryParamsHandling="preserve"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Market Overview
+  </a>
+  <a class="link" routerLink="/liquidity" queryParamsHandling="preserve" routerLinkActive="active">
+    Liquidity
+  </a>
 </div>
-<div>
-  <label *ngFor="let value of limits">
+
+<div class="limit">
+  Limit:
+  <label class="label" *ngFor="let value of limits">
     <input
+      class="input"
       type="radio"
       (change)="onLimitChange($event.target)"
       [value]="value || null"

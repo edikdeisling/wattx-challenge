@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'sanitize.css';
 
+:root {
+  --text-color: #030303;
+  --blue-100: #f0f8ff;
+  --blue-500: #c4e7ff;
+}
+
 html,
 body {
   height: 100%;
+  color: var(--text-color);
 }

@@ -1,0 +1,38 @@
+:host {
+  margin-bottom: 36px;
+}
+
+.links {
+  padding: 24px;
+}
+
+.link {
+  padding: 8px;
+  color: var(--text-color);
+  text-decoration: none;
+  background-color: var(--blue-100);
+  transition: background-color 150ms ease-in-out;
+}
+
+.active,
+.link:hover {
+  background-color: var(--blue-500);
+}
+
+.link + .link {
+  margin-left: 12px;
+}
+
+.limit {
+  text-align: center;
+}
+
+.label {
+  padding: 0 4px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.input {
+  cursor: pointer;
+}
