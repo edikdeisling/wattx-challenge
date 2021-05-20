@@ -1,5 +1,4 @@
-<a routerLink="/liquidity"> liquidity </a>
-<a routerLink="/">market-overview</a>
+<app-header [limit]="limit" (limitChange)="onLimitChange($event)"></app-header>
 <a routerLink="/" [queryParams]="{ limit: 2 }">market-overview 1</a>
 
 <router-outlet></router-outlet>

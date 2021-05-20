@@ -6,6 +6,18 @@
   "trailingComma": "all",
   "overrides": [
     {
+      "files": "*.component.html",
+      "options": {
+        "parser": "angular"
+      }
+    },
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "html"
+      }
+    },
+    {
       "files": "*.json",
       "options": {
         "singleQuote": false

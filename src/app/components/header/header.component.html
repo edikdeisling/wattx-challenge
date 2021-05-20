@@ -1,0 +1,16 @@
+<div>
+  <a routerLink="/liquidity">liquidity</a>
+  <a routerLink="/">market-overview</a>
+</div>
+<div>
+  <label *ngFor="let value of limits">
+    <input
+      type="radio"
+      (change)="onLimitChange($event.target)"
+      [value]="value || null"
+      name="currencies-limit"
+      [checked]="value === limit"
+    />
+    {{ value || 'All' }}
+  </label>
+</div>
