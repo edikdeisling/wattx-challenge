@@ -7,6 +7,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class PercentChangePipe implements PipeTransform {
   constructor(private decimalPipe: DecimalPipe) {}
 
+  /**
+   * Transform 12.3 to +12.30%
+   */
   transform(value: number): unknown {
     const sign = value > 0 ? '+' : value < 0 ? '-' : '';
 

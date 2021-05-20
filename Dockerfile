@@ -1,6 +1,7 @@
 FROM node:lts as build
 
 ENV HUSKY 0
+ENV CYPRESS_INSTALL_BINARY 0
 
 RUN mkdir -p /opt/app
 WORKDIR /opt/app

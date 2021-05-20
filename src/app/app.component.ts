@@ -20,6 +20,11 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    /**
+     * On every queryParams change load currencies
+     * activatedRoute.queryParams fires twice if limit is set, because of that we have
+     *   such code here to prevent that
+     */
     this.currenciesSubscription = this.router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),

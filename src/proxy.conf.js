@@ -4,7 +4,7 @@ const dotenv = require('dotenv-flow');
 const filenames = dotenv
   .listDotenvFiles('.', { node_env: 'development' })
   .filter((file) => fs.existsSync(file));
-const envVariables = dotenv.parse(filenames);
+const envVariables = { ...dotenv.parse(filenames), ...process.env };
 
 const config = {
   '/api': {

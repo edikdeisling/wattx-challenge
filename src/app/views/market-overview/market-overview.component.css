@@ -14,7 +14,6 @@ td {
 }
 
 @media (max-width: 719px) {
-
   :host {
     padding: 0 12px;
   }

@@ -2,7 +2,7 @@ module.exports = {
 	extends: ['stylelint-prettier/recommended', 'stylelint-config-rational-order'],
 	rules: {
 		'comment-empty-line-before': null, // allow not empty line before comment
-		'rule-empty-line-before': "always", // empty lines before css rules
+		'rule-empty-line-before': ['always', { ignore: [ 'first-nested' ] }], // empty lines before css rules
 		'max-nesting-depth': [
 			3, // max css nesting depth
 			{
