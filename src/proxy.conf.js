@@ -8,7 +8,7 @@ const envVariables = dotenv.parse(filenames);
 
 const config = {
   '/api': {
-    target: 'https://pro-api.coinmarketcap.com',
+    target: envVariables.API_URL,
     secure: false,
     changeOrigin: true,
     pathRewrite: {

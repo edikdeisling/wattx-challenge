@@ -1,0 +1,6 @@
+# Do not copy node_modules - we install from scratch
+node_modules
+.git
+.DS_Store
+.idea
+.vscode
