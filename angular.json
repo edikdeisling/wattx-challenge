@@ -32,7 +32,6 @@
           },
           "configurations": {
             "production": {
-              "extractCss": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -98,7 +97,47 @@
         "lint": {
           "builder": "@angular-eslint/builder:lint",
           "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "lintFilePatterns": ["cypress/**/*.ts", "src/**/*.ts", "src/**/*.html"]
+          }
+        },
+        "cypress-run": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "wattx-challenge:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "wattx-challenge:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "wattx-challenge:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "wattx-challenge:serve:production"
+            }
+          }
+        },
+        "e2e": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "wattx-challenge:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "wattx-challenge:serve:production",
+              "watch": false,
+              "headless": true,
+              "browser": "chrome"
+            }
           }
         }
       }

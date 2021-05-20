@@ -1,5 +1,6 @@
 <div class="links">
   <a
+    data-test="link-market-overview"
     class="link"
     routerLink="/"
     queryParamsHandling="preserve"
@@ -8,7 +9,13 @@
   >
     Market Overview
   </a>
-  <a class="link" routerLink="/liquidity" queryParamsHandling="preserve" routerLinkActive="active">
+  <a
+    data-test="link-liquidity"
+    class="link"
+    routerLink="/liquidity"
+    queryParamsHandling="preserve"
+    routerLinkActive="active"
+  >
     Liquidity
   </a>
 </div>
@@ -17,6 +24,7 @@
   Limit:
   <label class="label" *ngFor="let value of limits">
     <input
+      data-test="limit-radio"
       class="input"
       type="radio"
       (change)="onLimitChange($event.target)"
